@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Aline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Playlist Aline</h1>
+    </header>
+    <main>
+        <div class="playlist-container">
+            <!-- Header dan kontrol playlist -->
+            <div class="playlist-header">
+                <h1>Explore Playlists</h1>
+                <p>Find your favorite playlists and enjoy the music!</p>
+                <div class="playlist-controls">
+                    <input type="text" id="search" placeholder="Search playlists...">
+                    <select id="filter">
+                        <option value="">Filter by Genre</option>
+                        <option value="chill">Chill</option>
+                        <option value="top-hits">Top Hits</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="electronic">Electronic</option>
+                    </select>
+                    <button id="sort">Sort</button>
+                </div>
+            </div>
+            <!-- Kontainer untuk item playlist -->
+            <div class="playlist" id="playlistContainer">
+                <div class="playlist-item" data-genre="chill">
+                    <div class="playlist-item-icon">🌴</div>
+                    <img src="playlist1.jpg" alt="Cover for Chill Vibes Playlist">
+                    <div class="playlist-item-content">
+                        <h3 class="playlist-title">Chill Vibes</h3>
+                        <p>Relax and unwind with these chill tunes.</p>
+                        <button class="view" data-songs='[{"title": "Song 1", "artist": "Artist A"}, {"title": "Song 2", "artist": "Artist B"}]'>View Playlist</button>
+                        <button class="play">Play</button>
+                        <button class="details">Details</button>
+                        <button class="share">Share</button>
+                        <button class="favorite">Favorite</button>
+                    </div>
+                </div>
+                <div class="playlist-item" data-genre="pop">
+                    <div class="playlist-item-icon">🎤</div>
+                    <img src="playlist2.jpg" alt="Cover for Pop Hits Playlist">
+                    <div class="playlist-item-content">
+                        <h3 class="playlist-title">Pop Hits</h3>
+                        <p>Get your groove on with these pop hits.</p>
+                        <button class="view" data-songs='[{"title": "Song 3", "artist": "Artist C"}, {"title": "Song 4", "artist": "Artist D"}]'>View Playlist</button>
+                        <button class="play">Play</button>
+                        <button class="details">Details</button>
+                        <button class="share">Share</button>
+                        <button class="favorite">Favorite</button>
+                    </div>
+                </div>
+                <div class="playlist-item" data-genre="rock">
+                    <div class="playlist-item-icon">🎸</div>
+                    <img src="playlist3.jpg" alt="Cover for Rock Classics Playlist">
+                    <div class="playlist-item-content">
+                        <h3 class="playlist-title">Rock Classics</h3>
+                        <p>Classic rock hits to keep you energized.</p>
+                        <button class="view" data-songs='[{"title": "Song 5", "artist": "Artist E"}, {"title": "Song 6", "artist": "Artist F"}]'>View Playlist</button>
+                        <button class="play">Play</button>
+                        <button class="details">Details</button>
+                        <button class="share">Share</button>
+                        <button class="favorite">Favorite</button>
+                    </div>
+                </div>
+                <div class="playlist-item" data-genre="jazz">
+                    <div class="playlist-item-icon">🎷</div>
+                    <img src="playlist4.jpg" alt="Cover for Smooth Jazz Playlist">
+                    <div class="playlist-item-content">
+                        <h3 class="playlist-title">Smooth Jazz</h3>
+                        <p>Enjoy the smooth sounds of jazz.</p>
+                        <button class="view" data-songs='[{"title": "Song 7", "artist": "Artist G"}, {"title": "Song 8", "artist": "Artist H"}]'>View Playlist</button>
+                        <button class="play">Play</button>
+                        <button class="details">Details</button>
+                        <button class="share">Share</button>
+                        <button class="favorite">Favorite</button>
+                    </div>
+                </div>
+                <div class="playlist-item" data-genre="electronic">
+                    <div class="playlist-item-icon">🎧</div>
+                    <img src="playlist5.jpg" alt="Cover for Electronic Beats Playlist">
+                    <div class="playlist-item-content">
+                        <h3 class="playlist-title">Electronic Beats</h3>
+                        <p>Electronic music to get you moving.</p>
+                        <button class="view" data-songs='[{"title": "Song 9", "artist": "Artist I"}, {"title": "Song 10", "artist": "Artist J"}]'>View Playlist</button>
+                        <button class="play">Play</button>
+                        <button class="details">Details</button>
+                        <button class="share">Share</button>
+                        <button class="favorite">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal untuk lagu playlist -->
+        <div id="playlistModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Playlist Songs</h2>
+                <div id="songList" class="song-list">
+                    <!-- Lagu akan ditampilkan di sini secara dinamis -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Playlist Aline. All rights reserved.</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

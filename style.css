@@ -1,0 +1,236 @@
+/* styles.css */
+
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eceff1;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #4a90e2, #50e3c2);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for Playlist Page */
+
+.playlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.playlist-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.playlist-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(#4a90e2, #50e3c2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.playlist-header p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.playlist-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.playlist-controls input,
+.playlist-controls select,
+.playlist-controls button {
+    padding: 10px;
+    border: 2px solid #4a90e2;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.playlist-controls input {
+    width: 200px;
+}
+
+.playlist-controls select {
+    width: 150px;
+    border: 2px solid #4a90e2;
+}
+
+.playlist-controls button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.playlist-controls button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+}
+
+.playlist-controls button:active {
+    background-color: #2a6d99;
+}
+
+/* Styles for Playlist Grid */
+
+.playlist {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 100%;
+}
+
+.playlist-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.playlist-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.playlist-item-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.playlist-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.playlist-item-content {
+    text-align: center;
+}
+
+.playlist-title {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.playlist-item button {
+    background-color: #50e3c2;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.playlist-item button:hover {
+    background-color: #45b79c;
+    transform: translateY(-2px);
+}
+
+.playlist-item button:active {
+    background-color: #38a08c;
+}
+
+/* Styles for Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #4a90e2;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .playlist-controls {
+        flex-direction: column;
+    }
+
+    .playlist-controls input,
+    .playlist-controls select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .playlist-header h1 {
+        font-size: 28px;
+    }
+
+    .playlist-item {
+        padding: 10px;
+    }
+
+    .playlist-item-content {
+        font-size: 14px;
+    }
+
+    .playlist-item button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
